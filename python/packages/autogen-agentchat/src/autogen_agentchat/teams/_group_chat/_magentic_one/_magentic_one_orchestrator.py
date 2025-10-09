@@ -2,7 +2,7 @@ import asyncio
 import json
 import logging
 import re
-from typing import Any, Dict, List, Mapping, Sequence
+from typing import Any, Dict, List, Mapping, Optional, Sequence
 
 from autogen_core import AgentId, CancellationToken, DefaultTopicId, MessageContext, event, rpc
 from autogen_core.models import (
@@ -315,7 +315,7 @@ class MagenticOneOrchestrator(BaseGroupChatManager):
         progress_ledger: Dict[str, Any] = {}
         assert self._max_json_retries > 0
         key_error: bool = False
-        key_e_msg: str = None
+        key_e_msg: Optional[str] = None
         for _ in range(self._max_json_retries):
             if self._model_client.model_info.get("structured_output", False):
                 response = await self._model_client.create(
