@@ -18,11 +18,7 @@
 			"version": "latest",
 			"dockerDashComposeVersion": "none"
 		},
-		"ghcr.io/elanhasson/devcontainer-features/dotnet-aspire-daily:1": {},
-		"ghcr.io/devcontainers/features/azure-cli:1": {},
 		"ghcr.io/devcontainers/features/git:1": {},
-		"ghcr.io/devcontainers/features/dotnet:2": {},
-		"ghcr.io/azure/azure-dev/azd:0": {},
 		"ghcr.io/devcontainers/features/python:1": {}
 	},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
@@ -39,8 +35,6 @@
 				"ms-python.python",
 				"ms-python.debugpy",
 				"GitHub.copilot",
-				"ms-dotnettools.csdevkit",
-				"ms-dotnettools.vscodeintellicode-csharp",
 				"github.vscode-github-actions"
 			]
 		}
