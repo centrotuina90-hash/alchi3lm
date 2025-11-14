@@ -1,0 +1,15 @@
+import json
+from datetime import datetime
+
+def serialize_datetime(obj):
+    if isinstance(obj, datetime):
+        return obj.isoformat()
+    raise TypeError(f"Type {type(obj)} not serializable")
+
+data = {
+    "user": "koushitha",
+    "login_time": datetime.now()
+}
+
+json_str = json.dumps(data, default=serialize_datetime)
+print(json_str)
